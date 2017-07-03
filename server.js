@@ -10,7 +10,14 @@ const app = express()
 app.engine('html', require('ejs').renderFile)
 app.set('view engine', 'html')
 app.use('/views', express.static(path.join(__dirname, 'views')))
-app.use('/Material_Design_files', express.static(path.join(__dirname, 'assets')))
+app.use('/assets', express.static(path.join(__dirname, 'assets')))
+app.use('/Material_Design_files', express.static(path.join(__dirname, 'Material_Design_files')))
+app.use('/fonts', express.static(path.join(__dirname, 'fonts')))
+app.use('/font', express.static(path.join(__dirname, 'font')))
+app.use('/font/roboto', express.static(path.join(__dirname, 'font/roboto')))
+app.use('/mdb-addons', express.static(path.join(__dirname, 'mdb-addons')))
+app.use('/js/modules', express.static(path.join(__dirname, 'js/modules')))
+app.use('/js', express.static(path.join(__dirname, 'js')))
 app.use(bodyParser.urlencoded({
   extended: false
 }))
@@ -37,7 +44,7 @@ app.post('/send', function(req, res) {
 // application -------------------------------------------------------------
 
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('index.html')
 })
 
 const server = app.listen(port, function()  {
