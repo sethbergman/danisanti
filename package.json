@@ -20,7 +20,7 @@
   "ejs": "^2.4.1",
   "express": "^4.13.4",
   "express-validator": "^3.2.0",
-  "nodemailer": "4.0.1",
+  "nodemailer": "4.2.0",
   "parsleyjs": "^2.3.11",
   "path": "^0.12.7",
   "serve-favicon": "^2.3.0"
